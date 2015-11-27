@@ -1,5 +1,6 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+import angularbootstrap from 'angular-bootstrap';
 import routing from './config/routes';
 
 import main from './main';
