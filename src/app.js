@@ -3,12 +3,12 @@ import uirouter from 'angular-ui-router';
 import angularbootstrap from 'angular-bootstrap';
 import routing from './config/routes';
 
+import styles from './styles/index.less';
+
 import main from './main';
 
-import styles from '../styles/styles.scss';
-
 angular.module('app', [
-  'ui.router',
+  'ngRoute',
   'app.main'
 ]).config(routing);
 

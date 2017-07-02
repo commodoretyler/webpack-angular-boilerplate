@@ -1,4 +1,10 @@
-var path = require('path');
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractLess = new ExtractTextPlugin({
+    filename: "[name].[contenthash].css",
+    disable: process.env.NODE_ENV === "development"
+});
 
 module.exports = {
   entry: "./src/app.js",
@@ -10,25 +16,28 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true
+        test: /\.less$/,
+        use: extractLess.extract({
+          use: [
+            { loader: "style-loader" },
+            { loader: "css-loader",
+              options: {
+                sourceMap: true
+              }
+            },
+            { loader: "less-loader",
+              options: {
+                sourceMap: true
+              }
             }
-          }
-        ]
-      },
-      { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
-      {
+          ]
+        })
+      }, {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [ extractLess ]
 };
