@@ -4,14 +4,6 @@ Boilerplate set up of Webpack with Angular 1.x and ES2015
 ## Installation
 Install [node](https://nodejs.org/en/). Node now comes with npm
 
-Install webpack
-
-    npm install webpack --global
-
-Install the webpack dev tools
-
-    npm install webpack-dev-tools --global
-
 Clone the repository
 
     git clone git@github.com:commodoretyler/webpack-angular-boilerplate.git && cd webpack-angular-boilerplate
@@ -22,7 +14,7 @@ Install the node dependencies
 
 Run the Webpack development server
 
-    webpack-dev-server --progress --colors
+    npm start
 
 Load <http://localhost:8080> into your browser
 
