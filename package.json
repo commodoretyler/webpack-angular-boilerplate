@@ -23,8 +23,7 @@
     "angular": "^1.6.4",
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
-    "angular-bootstrap": "^0.12.2",
-    "angular-route": "^1.6.4",
-    "angular-ui-router": "^0.2.15"
+    "angular-bootstrap": "latest",
+    "@uirouter/angularjs": "latest"
   }
 }
