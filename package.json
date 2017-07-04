@@ -20,10 +20,11 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "@uirouter/angularjs": "latest",
     "angular": "^1.6.4",
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
     "angular-bootstrap": "latest",
-    "@uirouter/angularjs": "latest"
+    "style-loader": "^0.18.2"
   }
 }
