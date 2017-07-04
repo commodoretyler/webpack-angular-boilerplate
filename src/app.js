@@ -9,6 +9,7 @@ import main from './main';
 
 angular.module('app', [
   'ui.router',
+  'ui.bootstrap',
   'app.main'
 ]).config(routing);
 
